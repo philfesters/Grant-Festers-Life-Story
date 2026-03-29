@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRANT FESTERS - A Life Documented - Strategy Over Impulse</title>
+<meta name="description" content="This is not a portfolio. This is a documented record of a life built under conditions that were never designed for building. Grant Festers. Ravensmead. Cape Town.">
+<meta property="og:title" content="GRANT FESTERS - A Life Documented">
+<meta property="og:description" content="Loss to Isolation to Recovery to Stability to Expansion. Built on a phone. No laptop. No team. No budget. Strategy Over Impulse.">
+<meta name="theme-color" content="#ff3ea5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;700;800&family=Oxanium:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#030308;--dark:#0a0a18;--card:#0d0d20;--card2:#111128;
+  --border:#1c1c3a;--border2:#2a2a50;
+  --pink:#ff3ea5;--pink-dim:#99244f;--purple:#b44fff;
+  --cyan:#00f5ff;--green:#39ff14;--gold:#ffd700;
+  --red:#ff4455;--orange:#ff8c00;
+  --text:#ddddf5;--dim:#5555aa;
+  --mono:'JetBrains Mono','Courier New',monospace;
+  --display:'Bebas Neue',sans-serif;
+  --body:'Oxanium',sans-serif;
+  --syne:'Syne',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9998;opacity:0.5;}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 3px,rgba(0,0,0,0.04) 4px);
+  pointer-events:none;z-index:9997;}
+@keyframes glitch1{0%{clip-path:inset(0 0 95% 0);transform:translate(-3px,0);}10%{clip-path:inset(30% 0 50% 0);transform:translate(3px,0);}20%{clip-path:inset(70% 0 10% 0);transform:translate(-3px,0);}30%{clip-path:inset(20% 0 70% 0);}50%{clip-path:inset(10% 0 85% 0);transform:translate(-3px,0);}100%{clip-path:inset(0 0 0 0);transform:translate(0,0);}}
+@keyframes glitch2{0%{clip-path:inset(50% 0 30% 0);transform:translate(3px,0);color:var(--purple);}25%{clip-path:inset(80% 0 5% 0);transform:translate(-3px,0);color:var(--cyan);}60%{clip-path:inset(20% 0 60% 0);transform:translate(3px,0);color:var(--pink);}100%{clip-path:inset(0 0 0 0);transform:translate(0,0);}}
+@keyframes neonPulse{0%,100%{text-shadow:0 0 10px var(--pink),0 0 30px var(--pink),0 0 60px var(--pink);}50%{text-shadow:0 0 5px var(--pink),0 0 15px var(--pink);}}
+@keyframes goldPulse{0%,100%{text-shadow:0 0 8px var(--gold),0 0 20px var(--gold);}50%{text-shadow:0 0 3px var(--gold),0 0 8px var(--gold);}}
+@keyframes flicker{0%,95%,100%{opacity:1;}96%{opacity:0.3;}97%{opacity:1;}98%{opacity:0.5;}99%{opacity:1;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes scan{0%{transform:translateY(-100%);}100%{transform:translateY(100vh);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+@keyframes borderGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,62,165,0);}50%{box-shadow:0 0 14px 2px rgba(255,62,165,0.25);}}
+.scanline{position:fixed;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+  opacity:0.05;animation:scan 10s linear infinite;pointer-events:none;z-index:9996;}
+/* BOOT */
+#boot{position:fixed;inset:0;background:#000;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;z-index:9999;padding:24px;transition:opacity 0.8s ease;}
+#boot.fade-out{opacity:0;pointer-events:none;}
+.boot-title{font-family:var(--display);font-size:clamp(32px,9vw,52px);color:var(--pink);
+  letter-spacing:5px;text-align:center;margin-bottom:4px;
+  text-shadow:0 0 20px rgba(255,62,165,0.6);animation:neonPulse 3s ease-in-out infinite;}
+.boot-sub{font-family:var(--mono);font-size:8px;color:var(--dim);letter-spacing:4px;
+  text-align:center;margin-bottom:22px;}
+#boot-log{font-family:var(--mono);font-size:10px;color:var(--cyan);
+  line-height:2;white-space:pre-wrap;max-width:400px;width:100%;margin-bottom:14px;}
+.boot-bar-bg{height:2px;background:#0a0a0a;border:1px solid #002233;
+  max-width:320px;width:100%;overflow:hidden;margin-bottom:10px;}
+.boot-bar-fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--pink));
+  transition:width 0.1s linear;}
+.boot-skip{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:2px;
+  margin-top:10px;cursor:pointer;border:1px solid var(--border2);
+  padding:6px 18px;background:transparent;transition:all 0.2s;}
+.boot-skip:hover{color:var(--cyan);border-color:var(--cyan);}
+/* NAV */
+#site{opacity:0;transition:opacity 0.7s ease;pointer-events:none;}
+#site.on{opacity:1;pointer-events:all;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:800;height:46px;
+  background:rgba(3,3,8,0.97);border-bottom:1px solid var(--border2);
+  backdrop-filter:blur(20px);display:flex;align-items:center;
+  justify-content:space-between;padding:0 16px;gap:6px;}
+.nav-logo{font-family:var(--display);font-size:18px;color:var(--pink);
+  letter-spacing:3px;text-shadow:0 0 12px rgba(255,62,165,0.4);}
+.nav-links{display:flex;align-items:center;gap:3px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.nav-link{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:1px;
+  padding:5px 9px;border-radius:3px;cursor:pointer;border:1px solid transparent;
+  background:transparent;color:var(--dim);transition:all 0.2s;white-space:nowrap;text-decoration:none;}
+.nav-link:hover,.nav-link.active{color:var(--cyan);border-color:rgba(0,245,255,0.3);}
+.nav-right{font-family:var(--mono);font-size:8px;color:var(--dim);flex-shrink:0;}
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;padding:80px 24px 60px;
+  text-align:center;position:relative;
+  background:radial-gradient(ellipse at 50% 10%,rgba(180,79,255,0.1) 0%,transparent 65%),
+             radial-gradient(ellipse at 0% 100%,rgba(255,62,165,0.07) 0%,transparent 55%);}
+.hero-eye{font-family:var(--mono);font-size:9px;color:var(--pink);letter-spacing:5px;margin-bottom:10px;opacity:0.8;}
+.hero-name{font-family:var(--display);font-size:clamp(42px,12vw,96px);color:var(--pink);
+  letter-spacing:4px;line-height:0.9;position:relative;
+  animation:neonPulse 4s ease-in-out infinite,flicker 14s infinite;}
+.hero-name::before,.hero-name::after{content:'GRANT FESTERS';position:absolute;top:0;left:0;width:100%;}
+.hero-name::before{animation:glitch1 7s infinite;color:var(--cyan);opacity:0.2;}
+.hero-name::after{animation:glitch2 7s infinite 0.3s;color:var(--purple);opacity:0.2;}
+.hero-soi{font-family:var(--syne);font-size:clamp(11px,3vw,16px);color:var(--purple);
+  letter-spacing:5px;margin-top:10px;font-weight:800;}
+.hero-loc{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:3px;margin:12px 0 8px;}
+.hero-tag{font-family:var(--mono);font-size:11px;color:var(--text);
+  opacity:0.7;line-height:2;margin:14px 0 22px;max-width:500px;}
+.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-bottom:26px;}
+.hb{font-family:var(--mono);font-size:8px;font-weight:700;padding:4px 11px;border-radius:3px;letter-spacing:1px;}
+.hb-p{background:rgba(255,62,165,0.1);color:var(--pink);border:1px solid rgba(255,62,165,0.3);}
+.hb-v{background:rgba(180,79,255,0.1);color:var(--purple);border:1px solid rgba(180,79,255,0.3);}
+.hb-c{background:rgba(0,245,255,0.07);color:var(--cyan);border:1px solid rgba(0,245,255,0.25);}
+.hb-g{background:rgba(255,215,0,0.07);color:var(--gold);border:1px solid rgba(255,215,0,0.25);}
+.hb-gr{background:rgba(57,255,20,0.07);color:var(--green);border:1px solid rgba(57,255,20,0.25);}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;}
+.cta{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:1px;
+  padding:9px 18px;border-radius:4px;cursor:pointer;text-decoration:none;
+  transition:all 0.22s;border:1px solid;display:inline-flex;align-items:center;gap:6px;}
+.cta-p{background:rgba(255,62,165,0.1);color:var(--pink);border-color:rgba(255,62,165,0.45);}
+.cta-p:hover{background:rgba(255,62,165,0.2);transform:translateY(-2px);}
+.cta-c{background:rgba(0,245,255,0.06);color:var(--cyan);border-color:rgba(0,245,255,0.35);}
+.cta-c:hover{background:rgba(0,245,255,0.12);transform:translateY(-2px);}
+.cta-v{background:rgba(180,79,255,0.1);color:var(--purple);border-color:rgba(180,79,255,0.4);}
+.cta-v:hover{background:rgba(180,79,255,0.2);transform:translateY(-2px);}
+.scroll-hint{margin-top:30px;font-family:var(--mono);font-size:8px;
+  color:var(--dim);letter-spacing:3px;animation:blink 2s ease-in-out infinite;}
+/* SECTIONS */
+.sec{padding:44px 20px;max-width:760px;margin:0 auto;}
+.sec-tag{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:4px;margin-bottom:5px;}
+.sec-title{font-family:var(--display);font-size:clamp(30px,7vw,52px);letter-spacing:2px;line-height:1;}
+.sec-title.pk{color:var(--pink);}
+.sec-title.cy{color:var(--cyan);}
+.sec-title.pu{color:var(--purple);}
+.sec-title.go{color:var(--gold);}
+.sec-title.gr{color:var(--green);}
+.sec-line{height:1px;margin:10px 0 22px;opacity:0.35;}
+.sec-line.pk{background:linear-gradient(90deg,var(--pink),transparent);}
+.sec-line.cy{background:linear-gradient(90deg,var(--cyan),transparent);}
+.sec-line.pu{background:linear-gradient(90deg,var(--purple),transparent);}
+.sec-line.go{background:linear-gradient(90deg,var(--gold),transparent);}
+.sec-line.gr{background:linear-gradient(90deg,var(--green),transparent);}
+.synopsis{font-family:var(--mono);font-size:10px;color:var(--dim);line-height:2;
+  border-left:2px solid var(--border2);padding-left:14px;margin-bottom:24px;}
+.quote{padding:16px 18px;margin:20px 0;font-style:italic;font-size:13px;
+  color:var(--text);line-height:1.85;border-radius:0 4px 4px 0;}
+.quote.pk{background:rgba(255,62,165,0.06);border-left:3px solid var(--pink);}
+.quote.pu{background:rgba(180,79,255,0.06);border-left:3px solid var(--purple);}
+.quote.go{background:rgba(255,215,0,0.05);border-left:3px solid var(--gold);}
+.quote.cy{background:rgba(0,245,255,0.05);border-left:3px solid var(--cyan);}
+.quote.gr{background:rgba(57,255,20,0.04);border-left:3px solid var(--green);}
+.q-attr{margin-top:8px;font-size:9px;font-family:var(--mono);color:var(--dim);letter-spacing:2px;font-style:normal;}
+/* NAP BOX */
+.nap{background:rgba(255,62,165,0.04);border:1px solid rgba(255,62,165,0.2);
+  border-radius:5px;padding:28px 24px;text-align:center;margin:28px 0;}
+.nap-t{font-family:var(--display);font-size:clamp(22px,6vw,42px);color:var(--pink);letter-spacing:3px;margin-bottom:14px;}
+.nap-b{font-size:13px;line-height:2;color:var(--text);opacity:0.85;max-width:540px;margin:0 auto;}
+.nap-m{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;
+  margin-top:20px;font-family:var(--mono);font-size:9px;color:var(--dim);}
+.nap-m span{letter-spacing:2px;} .nap-m .hi{color:var(--cyan);}
+/* STATS */
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0;}
+.stat{background:var(--card2);border:1px solid var(--border);border-radius:4px;
+  padding:12px 16px;text-align:center;flex:1;min-width:80px;}
+.stat-n{font-family:var(--display);font-size:28px;display:block;line-height:1;letter-spacing:1px;}
+.stat-n.pk{color:var(--pink);} .stat-n.cy{color:var(--cyan);}
+.stat-n.pu{color:var(--purple);} .stat-n.go{color:var(--gold);}
+.stat-n.gr{color:var(--green);}
+.stat-l{font-family:var(--mono);font-size:7px;color:var(--dim);letter-spacing:2px;display:block;margin-top:4px;}
+/* CTX BAR */
+.ctx{background:var(--card2);border:1px solid var(--border);border-radius:5px;
+  padding:16px;margin:20px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(min-width:600px){.ctx{grid-template-columns:repeat(4,1fr);}}
+.ctx-i{text-align:center;}
+.ctx-v{font-family:var(--mono);font-size:10px;color:var(--cyan);font-weight:700;letter-spacing:1px;display:block;}
+.ctx-k{font-family:var(--mono);font-size:7px;color:var(--dim);letter-spacing:2px;display:block;margin-top:3px;}
+/* TIMELINE */
+.tl{position:relative;padding-left:28px;}
+.tl::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:1px;
+  background:linear-gradient(180deg,var(--pink),var(--purple),var(--cyan),var(--green));opacity:0.22;}
+.tl-i{position:relative;margin-bottom:24px;}
+.tl-dot{position:absolute;left:-22px;top:5px;width:9px;height:9px;border-radius:50%;border:2px solid;background:var(--bg);}
+.tl-dot.p{border-color:var(--pink);box-shadow:0 0 6px rgba(255,62,165,0.5);}
+.tl-dot.v{border-color:var(--purple);box-shadow:0 0 6px rgba(180,79,255,0.5);}
+.tl-dot.c{border-color:var(--cyan);box-shadow:0 0 6px rgba(0,245,255,0.5);}
+.tl-dot.g{border-color:var(--gold);box-shadow:0 0 6px rgba(255,215,0,0.5);}
+.tl-dot.r{border-color:var(--red);box-shadow:0 0 6px rgba(255,68,68,0.5);}
+.tl-dot.gr{border-color:var(--green);box-shadow:0 0 6px rgba(57,255,20,0.5);}
+.tl-y{font-family:var(--mono);font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:3px;}
+.tl-t{font-family:var(--syne);font-size:13px;font-weight:700;color:var(--text);margin-bottom:5px;}
+.tl-d{font-size:11.5px;color:var(--dim);line-height:1.85;}
+/* CHAPTERS */
+.ch{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:24px 20px;margin-bottom:20px;position:relative;overflow:hidden;}
+.ch::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;opacity:0.5;}
+.ch.pk{border-left:3px solid var(--pink);}
+.ch.pk::before{background:linear-gradient(90deg,var(--pink),transparent);}
+.ch.pu{border-left:3px solid var(--purple);}
+.ch.pu::before{background:linear-gradient(90deg,var(--purple),transparent);}
+.ch.cy{border-left:3px solid var(--cyan);}
+.ch.cy::before{background:linear-gradient(90deg,var(--cyan),transparent);}
+.ch.go{border-left:3px solid var(--gold);}
+.ch.go::before{background:linear-gradient(90deg,var(--gold),transparent);}
+.ch.gr{border-left:3px solid var(--green);}
+.ch.gr::before{background:linear-gradient(90deg,var(--green),transparent);}
+.ch-num{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:3px;margin-bottom:5px;}
+.ch-t{font-family:var(--display);font-size:clamp(22px,5vw,34px);letter-spacing:1px;line-height:1.1;margin-bottom:5px;}
+.ch.pk .ch-t{color:var(--pink);} .ch.pu .ch-t{color:var(--purple);}
+.ch.cy .ch-t{color:var(--cyan);} .ch.go .ch-t{color:var(--gold);}
+.ch.gr .ch-t{color:var(--green);}
+.ch-sub{font-family:var(--mono);font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:16px;}
+.ch-b{font-size:12.5px;line-height:2;color:rgba(221,221,245,0.88);}
+.ch-b p{margin-bottom:14px;} .ch-b p:last-child{margin-bottom:0;}
+.ch-status{display:inline-block;font-family:var(--mono);font-size:8px;
+  padding:3px 9px;border-radius:2px;letter-spacing:2px;margin-top:14px;}
+.done{background:rgba(57,255,20,0.08);color:var(--green);border:1px solid rgba(57,255,20,0.2);}
+.live{background:rgba(255,62,165,0.08);color:var(--pink);border:1px solid rgba(255,62,165,0.3);animation:borderGlow 2s infinite;}
+/* BUILD CARDS */
+.bc{background:var(--card);border:1px solid var(--border);border-radius:5px;
+  padding:20px;margin-bottom:13px;transition:border-color 0.25s;position:relative;overflow:hidden;}
+.bc::after{content:'';position:absolute;top:0;left:-100%;right:0;bottom:0;
+  background:linear-gradient(90deg,transparent,rgba(255,62,165,0.03),transparent);transition:left 0.45s;}
+.bc:hover::after{left:100%;}
+.bc.pk:hover{border-color:var(--pink);}
+.bc.cy:hover{border-color:var(--cyan);}
+.bc.pu:hover{border-color:var(--purple);}
+.bc.go:hover{border-color:var(--gold);}
+.bc.gr:hover{border-color:var(--green);}
+.bc-ver{font-family:var(--mono);font-size:8px;color:var(--dim);letter-spacing:2px;margin-bottom:4px;}
+.bc-name{font-family:var(--display);font-size:clamp(20px,5vw,28px);letter-spacing:1px;margin-bottom:10px;}
+.bc.pk .bc-name{color:var(--pink);}
+.bc.cy .bc-name{color:var(--cyan);}
+.bc.pu .bc-name{color:var(--purple);}
+.bc.go .bc-name{color:var(--gold);}
+.bc.gr .bc-name{color:var(--green);}
+.bc p{font-size:11.5px;line-height:1.85;color:var(--text);opacity:0.85;}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px;}
+.tag{font-family:var(--mono);font-size:7px;padding:3px 8px;border-radius:2px;letter-spacing:1px;}
+.tp{background:rgba(255,62,165,0.1);color:var(--pink);border:1px solid rgba(255,62,165,0.2);}
+.tc{background:rgba(0,245,255,0.07);color:var(--cyan);border:1px solid rgba(0,245,255,0.2);}
+.tv{background:rgba(180,79,255,0.1);color:var(--purple);border:1px solid rgba(180,79,255,0.2);}
+.tg{background:rgba(255,215,0,0.07);color:var(--gold);border:1px solid rgba(255,215,0,0.2);}
+.tgr{background:rgba(57,255,20,0.07);color:var(--green);border:1px solid rgba(57,255,20,0.2);}
+/* SOI */
+.principle{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);}
+.principle:last-child{border-bottom:none;}
+.p-n{font-family:var(--mono);font-size:9px;color:var(--pink);font-weight:700;min-width:24px;margin-top:2px;}
+.p-t{font-size:12px;color:var(--text);line-height:1.85;}
+.p-t strong{color:var(--cyan);}
+/* BOJACK */
+.bj{background:rgba(255,215,0,0.04);border:1px solid rgba(255,215,0,0.2);
+  border-radius:5px;padding:28px 20px;text-align:center;margin:28px 0;}
+.bj-name{font-family:var(--display);font-size:clamp(32px,8vw,56px);color:var(--gold);
+  letter-spacing:3px;animation:goldPulse 3s ease-in-out infinite;}
+.bj-breed{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:3px;margin:8px 0 16px;}
+.bj-b{font-size:12.5px;line-height:2;color:var(--text);opacity:0.85;max-width:520px;margin:0 auto;}
+/* HEALTH */
+.hw{background:rgba(255,68,68,0.05);border:1px solid rgba(255,68,68,0.2);border-radius:4px;
+  padding:14px 16px;margin-bottom:20px;font-family:var(--mono);font-size:9px;color:var(--red);letter-spacing:1px;line-height:1.8;}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:16px;margin-bottom:11px;}
+.cc-name{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:1px;margin-bottom:4px;}
+.cc-num{font-family:var(--display);font-size:22px;color:var(--pink);letter-spacing:2px;}
+.cc-note{font-family:var(--mono);font-size:8px;color:var(--dim);letter-spacing:1px;margin-top:4px;}
+.cc-sub{font-family:var(--mono);font-size:9px;color:var(--cyan);margin:4px 0;}
+/* FOOTER */
+.foot{padding:36px 20px 80px;text-align:center;border-top:1px solid var(--border);max-width:760px;margin:0 auto;}
+.foot-name{font-family:var(--display);font-size:clamp(24px,6vw,40px);color:var(--pink);
+  letter-spacing:4px;animation:neonPulse 4s ease-in-out infinite;}
+.foot-soi{font-family:var(--mono);font-size:9px;color:var(--purple);letter-spacing:4px;margin:6px 0 20px;}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px;}
+.fl{font-family:var(--mono);font-size:8px;color:var(--dim);letter-spacing:1px;
+  padding:5px 11px;border:1px solid var(--border2);border-radius:3px;text-decoration:none;transition:all 0.2s;}
+.fl:hover{color:var(--cyan);border-color:rgba(0,245,255,0.35);}
+.foot-c{font-family:var(--mono);font-size:8px;color:var(--dim);letter-spacing:2px;line-height:2;}
+.foot-c span{color:var(--pink);}
+/* TOAST */
+.toast{position:fixed;top:14px;right:14px;z-index:9000;font-family:var(--mono);font-size:9px;
+  letter-spacing:1px;padding:9px 16px;border-radius:4px;border:1px solid;
+  transform:translateX(120%);transition:transform 0.3s ease;pointer-events:none;}
+.toast.show{transform:translateX(0);}
+.toast.pk{background:rgba(255,62,165,0.1);color:var(--pink);border-color:rgba(255,62,165,0.35);}
+.toast.cy{background:rgba(0,245,255,0.07);color:var(--cyan);border-color:rgba(0,245,255,0.3);}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:#0a0a18;}
+::-webkit-scrollbar-thumb{background:var(--border2);}
+::-webkit-scrollbar-thumb:hover{background:var(--pink);}
+.g2{display:grid;grid-template-columns:1fr;gap:13px;}
+@media(min-width:600px){.g2{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="toast" id="toast"></div>
+
+<!-- BOOT -->
+<div id="boot">
+  <div class="boot-title">GRANT FESTERS</div>
+  <div class="boot-sub">STRATEGY OVER IMPULSE &middot; RAVENSMEAD &middot; 1992&ndash;&infin;</div>
+  <div id="boot-log"></div>
+  <div class="boot-bar-bg"><div class="boot-bar-fill" id="bbar"></div></div>
+  <button class="boot-skip" onclick="bootSkip()">[ SKIP BOOT ]</button>
+</div>
+
+<!-- SITE -->
+<div id="site">
+
+<nav class="nav">
+  <div class="nav-logo">FEZZY WRLD</div>
+  <div class="nav-links">
+    <a class="nav-link" href="#story">STORY</a>
+    <a class="nav-link" href="#chapters">CHAPTERS</a>
+    <a class="nav-link" href="#build">BUILDS</a>
+    <a class="nav-link" href="#soi">SOI</a>
+    <a class="nav-link" href="#bojack">BOJACK</a>
+    <a class="nav-link" href="#health">HEALTH</a>
+  </div>
+  <div class="nav-right" id="clock"></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-eye">DOCUMENTED LIFE RECORD &middot; 1992 &rarr; PRESENT</div>
+  <h1 class="hero-name">GRANT FESTERS</h1>
+  <div class="hero-soi">STRATEGY OVER IMPULSE</div>
+  <div class="hero-loc">&#128205; RAVENSMEAD &middot; CAPE TOWN &middot; SOUTH AFRICA</div>
+  <p class="hero-tag">Developer. Artist. Survivor.<br>This is not a portfolio.<br>This is proof that I did not stop.</p>
+  <div class="hero-badges">
+    <span class="hb hb-p">SELF-TAUGHT</span>
+    <span class="hb hb-v">TERMUX &middot; ANDROID 14</span>
+    <span class="hb hb-c">NO LAPTOP &middot; NO TEAM</span>
+    <span class="hb hb-g">V1 &rarr; V55 DOCUMENTED</span>
+    <span class="hb hb-gr">120K+ ORGANIC VIEWS</span>
+    <span class="hb hb-p">999 FOREVER</span>
+  </div>
+  <div class="hero-cta">
+    <a class="cta cta-p" href="#chapters">&#9654; READ THE STORY</a>
+    <a class="cta cta-c" href="#build">&#9000; SEE THE BUILDS</a>
+    <a class="cta cta-v" href="https://github.com/philfesters" target="_blank">&#9711; GITHUB</a>
+  </div>
+  <div class="scroll-hint">&#9660; SCROLL &#9660;</div>
+</section>
+
+<!-- STORY -->
+<section class="sec" id="story">
+  <div class="nap">
+    <div class="nap-t">THIS IS NOT A PORTFOLIO</div>
+    <p class="nap-b">This is a documented record of a person who refused to let their work &mdash; and their life &mdash; disappear into the dark. Every line of code was written from a phone screen. Every chapter was lived before it was written. Nothing has been sanitised. Nothing has been curated for comfort. The internet will have this. The world will know who built in these conditions.</p>
+    <div class="nap-m">
+      <span>&#128205; <span class="hi">RAVENSMEAD, CAPE TOWN</span></span>
+      <span>&#127874; <span class="hi">BORN 1992</span></span>
+      <span>&#128187; <span class="hi">HONOR X5B &middot; ANDROID 14</span></span>
+      <span>&#9711; <span class="hi">R0 BUDGET</span></span>
+    </div>
+  </div>
+
+  <div class="sec-tag">CONTEXT</div>
+  <h2 class="sec-title pk">THE SETUP</h2>
+  <div class="sec-line pk"></div>
+  <div class="ctx">
+    <div class="ctx-i"><span class="ctx-v">HONOR X5B</span><span class="ctx-k">DEVICE</span></div>
+    <div class="ctx-i"><span class="ctx-v">ANDROID 14</span><span class="ctx-k">OS</span></div>
+    <div class="ctx-i"><span class="ctx-v">TERMUX</span><span class="ctx-k">ENVIRONMENT</span></div>
+    <div class="ctx-i"><span class="ctx-v">ROOTLESS</span><span class="ctx-k">ROOT STATUS</span></div>
+    <div class="ctx-i"><span class="ctx-v">V55</span><span class="ctx-k">CURRENT VERSION</span></div>
+    <div class="ctx-i"><span class="ctx-v">120K+</span><span class="ctx-k">ORGANIC VIEWS</span></div>
+    <div class="ctx-i"><span class="ctx-v">R0</span><span class="ctx-k">BUDGET</span></div>
+    <div class="ctx-i"><span class="ctx-v">ZERO</span><span class="ctx-k">PROMOTION PLANS</span></div>
+  </div>
+
+  <div class="quote pk">"When I lost the job and the relationship, I had nothing left except the terminal. It became the only place where effort mapped to output. That is what all of this represents &mdash; proof that I kept going despite the weight."<div class="q-attr">&mdash; GRANT FESTERS &middot; RAVENSMEAD &middot; 2026</div></div>
+
+  <div class="sec-tag">TRAJECTORY</div>
+  <h2 class="sec-title pu">THE ARC</h2>
+  <div class="sec-line pu"></div>
+  <div class="tl">
+    <div class="tl-i"><div class="tl-dot p"></div><div class="tl-y">BEFORE 2020</div><div class="tl-t">Connection. Love. The Before.</div><div class="tl-d">BBM era. Real connections. A 6-year relationship. Community. The person who existed before the damage was done.</div></div>
+    <div class="tl-i"><div class="tl-dot r"></div><div class="tl-y">2020&ndash;2022</div><div class="tl-t">The Weight Arrives.</div><div class="tl-d">Job loss. The 6-year relationship ends. Institutional betrayal. The silence descends. The apartment becomes everything.</div></div>
+    <div class="tl-i"><div class="tl-dot v"></div><div class="tl-y">2022&ndash;2023</div><div class="tl-t">The Terminal Becomes the Anchor.</div><div class="tl-d">Termux. First scripts. First tools. Admin Fezzy plans. Intox Fezzy ships. Both modes valid. Bojack Security V1 is born.</div></div>
+    <div class="tl-i"><div class="tl-dot c"></div><div class="tl-y">2023&ndash;2025</div><div class="tl-t">Building Under Pressure.</div><div class="tl-d">V1 to V55. Fezzy Station grows. Still Here launches. Grant &amp; The Machines documents the AI workflow. 120K+ views with zero promotion budget.</div></div>
+    <div class="tl-i"><div class="tl-dot g"></div><div class="tl-y">2025 &mdash; REHAB</div><div class="tl-t">The Decision That Required the Most Strategy.</div><div class="tl-d">Rehab. The hardest thing. Four months clean. Asking for help is the most strategic move you can make.</div></div>
+    <div class="tl-i"><div class="tl-dot gr"></div><div class="tl-y">2026 &mdash; NOW</div><div class="tl-t">The Return. Stability. Expansion.</div><div class="tl-d">Recovery holds. The builds continue. The documentation grows. Ravensmead is still home. The work did not stop during any of this.</div></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="sec">
+  <div class="stats">
+    <div class="stat"><span class="stat-n pk" id="dc">0</span><span class="stat-l">DAYS BUILDING</span></div>
+    <div class="stat"><span class="stat-n cy">55</span><span class="stat-l">VERSIONS</span></div>
+    <div class="stat"><span class="stat-n pu">120K+</span><span class="stat-l">ORGANIC VIEWS</span></div>
+    <div class="stat"><span class="stat-n go">R0</span><span class="stat-l">BUDGET SPENT</span></div>
+    <div class="stat"><span class="stat-n gr">10</span><span class="stat-l">PORTALS BUILT</span></div>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section class="sec" id="chapters">
+  <div class="sec-tag">THE ARCHIVE</div>
+  <h2 class="sec-title pk">LIFE CHAPTERS</h2>
+  <div class="sec-line pk"></div>
+  <p class="synopsis">Each chapter is raw documentation. Not curated. Not sanitised. This is who I am. Written in the same conditions the events occurred in &mdash; a phone screen, a terminal, and Ravensmead outside the window.</p>
+
+  <div class="ch pu">
+    <div class="ch-num">CHAPTER 00</div>
+    <h3 class="ch-t">THE BEFORE</h3>
+    <div class="ch-sub">BBM ERA &middot; REAL CONNECTIONS &middot; WHO I WAS</div>
+    <div class="ch-b">
+      <p>There was a time before the silence. Before the apartment became the whole world. Before the terminal was the only place where effort mapped to outcome.</p>
+      <p>The BBM era. Blackberry Messenger. Ravensmead was connected in ways that felt physical. You knew who was online. You knew the ping of someone who actually wanted to talk to you. It was small, but it was real &mdash; that web of connection. People who knew your name. Conversations that carried weight.</p>
+      <p>I existed in that. I was part of community. I had a voice that people heard before I learned to code it into a screen. The Before is important to document because it proves that what came later was not always how things were. There was a person here who laughed, who knew people, who was known.</p>
+      <p>This chapter exists so the damage is understood in context. You cannot understand what was lost unless you know what was there.</p>
+    </div>
+    <span class="ch-status done">&#10003; COMPLETE</span>
+  </div>
+
+  <div class="ch pk">
+    <div class="ch-num">CHAPTER 00A</div>
+    <h3 class="ch-t">THE LOVE THAT WAS REAL</h3>
+    <div class="ch-sub">SIX YEARS &middot; GENUINE &middot; DOCUMENTED</div>
+    <div class="ch-b">
+      <p>Six years. Not a casual thing. Not a phase. A real partnership that shaped who I am &mdash; how I think, how I approach loyalty, what I understand about the weight of another person's trust.</p>
+      <p>This chapter is difficult to write because it requires honesty about what was genuine and what ended. Both things are true. The love was real. The ending was also real. Neither cancels the other.</p>
+      <p>When it ended, it did not leave quietly. It left with everything else that was leaving at the same time &mdash; the job, the routine, the structure that had held the days together. The timing meant there was nothing left to absorb the impact. Just the apartment. Just the silence. Just me.</p>
+      <p>Six years is documented here because it deserves to be. Because love that lasts that long &mdash; even when it ends &mdash; is part of who you are. I am not ashamed of it. I am not trying to erase it. It was real. It is part of the archive.</p>
+    </div>
+    <span class="ch-status done">&#10003; COMPLETE</span>
+  </div>
+
+  <div class="ch cy">
+    <div class="ch-num">CHAPTER 01</div>
+    <h3 class="ch-t">THE ISOLATION</h3>
+    <div class="ch-sub">THE SILENCE &middot; THE APARTMENT &middot; THE TERMINAL</div>
+    <div class="ch-b">
+      <p>The silence is the thing nobody warns you about. It does not arrive like a storm. It arrives like the absence of something you did not know you needed &mdash; and then it stays.</p>
+      <p>The apartment became the whole world. Not by choice, but by collapse of everything outside it. No job to leave for. No relationship to show up for. Ravensmead was still there outside the window but the distance between inside and outside felt uncrossable.</p>
+      <p>This is when I found Termux. Not because I was looking for a calling. Because I needed somewhere to put energy that would not disappear. Every job application that got no response was energy that went nowhere. Every attempt to reconnect that got silence back was energy that went nowhere. The terminal was different. You typed. Something happened. Effort mapped to output.</p>
+      <p>That was everything in that period. The terminal was the only honest relationship I had. You input something correct, it works. You input something wrong, it tells you. No ambiguity. No silence that means something you cannot decode. Just truth in return for effort.</p>
+      <p>That is how it started. That is why it started. Not inspiration &mdash; necessity.</p>
+    </div>
+    <span class="ch-status done">&#10003; COMPLETE</span>
+  </div>
+
+  <div class="ch go">
+    <div class="ch-num">CHAPTER 02</div>
+    <h3 class="ch-t">THE WEIGHT</h3>
+    <div class="ch-sub">LOYALTY STRIPPED BY INSTITUTIONS &middot; WHAT THEY TOOK</div>
+    <div class="ch-b">
+      <p>Job loss is not just financial. That is the part nobody explains until it happens to you. It is structural. It is the removal of purpose, of schedule, of the daily proof that you are useful to something. When an institution removes that &mdash; especially one you gave loyalty to &mdash; it is a specific kind of damage.</p>
+      <p>They took the routine. They took the reason to get dressed. They took the thing that gave the week shape. What they did not anticipate &mdash; what I did not anticipate &mdash; is that removing all of that at the same time the relationship ended would leave a person with nothing external to hold onto.</p>
+      <p>This chapter is not about bitterness. It is about documentation. About putting on record what the conditions were, so that what was built inside those conditions is understood correctly. You cannot evaluate the builds without knowing what they were built during.</p>
+      <p>If stability was not there, nothing could stand. So I rebuilt stability first &mdash; with Bash scripts, with Python, with a phone screen and Termux and the discipline of SOI: Am I acting on strategy or impulse right now? That question became the only rule left.</p>
+    </div>
+    <span class="ch-status done">&#10003; COMPLETE</span>
+  </div>
+
+  <div class="ch pu">
+    <div class="ch-num">CHAPTER 03</div>
+    <h3 class="ch-t">THE DUALITY</h3>
+    <div class="ch-sub">ADMIN FEZZY PLANS &middot; INTOX FEZZY SHIPS &middot; BOTH ARE REAL</div>
+    <div class="ch-b">
+      <p>There are two modes. This is not a metaphor. It is a documented operational reality.</p>
+      <p>Admin Fezzy is structured. Strategic. Plans before building. Documents everything. Reads the error message before trying again. Creates README files at midnight before pushing anything. Version numbers matter to Admin Fezzy. Syntax validation is a ritual.</p>
+      <p>Intox Fezzy ships. Ships at 2am. Ships with a vision that does not have a plan yet. Ships things that sometimes need to be repaired in the morning. Is responsible for half the best ideas and also most of the merge conflicts.</p>
+      <p>Both modes are valid. Both have produced real things. The discipline is knowing which one is operating at any given moment &mdash; and knowing when to let it run and when to stop it and hand over to the other.</p>
+      <p>Strategy Over Impulse does not mean suppressing the Intox mode. It means having enough self-awareness to know which mode you are in and making conscious decisions within it. That is the whole philosophy, distilled.</p>
+    </div>
+    <span class="ch-status done">&#10003; COMPLETE</span>
+  </div>
+
+  <div class="ch go">
+    <div class="ch-num">CHAPTER 04</div>
+    <h3 class="ch-t">THE ANCHOR</h3>
+    <div class="ch-sub">BOJACK &middot; LAB/HUSKY MIX &middot; LOYALTY WITHOUT CONDITION</div>
+    <div class="ch-b">
+      <p>When everything else left, Bojack stayed. That is the simplest and most complete thing I can say about this chapter.</p>
+      <p>A Lab/Husky mix. His presence is physical and immediate in a way that code cannot be. He does not care about version numbers. He does not care about the build being broken. He is there at 2am when the session is running long. He is there in the morning when the previous session's damage needs to be assessed.</p>
+      <p>I named the security suite after him because that is what the security suite is &mdash; something that watches the perimeter. Loyal without being asked. Consistent without being programmed. Present in a way that institutions and relationships could not sustain.</p>
+      <p>Bojack Security exists as a technical project. But the name is not branding. The name is gratitude. For the one anchor that did not move during the years when everything else was moving.</p>
+    </div>
+    <span class="ch-status done">&#10003; COMPLETE</span>
+  </div>
+
+  <div class="ch cy">
+    <div class="ch-num">CHAPTER 05</div>
+    <h3 class="ch-t">THE BUILD</h3>
+    <div class="ch-sub">WHAT I MADE ANYWAY &middot; V1 TO V55 &middot; PHONE ONLY</div>
+    <div class="ch-b">
+      <p>This is the chapter that surprises people. Not the chapters about loss &mdash; those are expected. The surprise is that all the loss happened simultaneously with all the building.</p>
+      <p>While the relationship was ending, Fezzy Station V1 was being written. While the job applications were getting no responses, Bojack Security was growing from 400 lines to 2800+. While the isolation was deepest, the GitHub commits were most consistent.</p>
+      <p>The terminal did not care about the external conditions. You could be in the worst year of your life and still push a working script at midnight. That dissociation between external collapse and internal production is one of the things I most want documented. It is proof that the work was not performed for an audience. There was no audience. It was built because building was the only thing left that responded to effort correctly.</p>
+      <p>V1 to V55. Each version documented. Each version a record of where I was when it was written. The builds are a diary. The commits are timestamps. The code was built during this. Not after. During.</p>
+    </div>
+    <span class="ch-status done">&#10003; COMPLETE</span>
+  </div>
+
+  <div class="ch pu">
+    <div class="ch-num">CHAPTER 06</div>
+    <h3 class="ch-t">THE VISION</h3>
+    <div class="ch-sub">APK &middot; FLASK &middot; PRODUCT SUITE &middot; WHAT IS NEXT</div>
+    <div class="ch-b">
+      <p>The current builds are not the ceiling. They are proof of concept &mdash; proof that a person with a phone and Termux can produce tools that 120,000 people find and use without any promotion budget whatsoever.</p>
+      <p>The vision is an APK. Fezzy Station packaged as a proper Android application via Expo EAS. A Flask dashboard that runs the security tools from a clean interface. A product suite that makes Ravensmead-built tools accessible to people who do not have Termux experience.</p>
+      <p>The three-AI workflow is already operational: Claude for architecture and code, ChatGPT for design and visuals, Gemini for research and ideas. The pipeline exists. The foundation exists. V55 is not the end &mdash; it is the platform the next phase launches from.</p>
+    </div>
+    <span class="ch-status done">&#10003; DOCUMENTED</span>
+  </div>
+
+  <div class="ch gr">
+    <div class="ch-num">CHAPTER 07</div>
+    <h3 class="ch-t">THE RETURN</h3>
+    <div class="ch-sub">REHAB &middot; RECOVERY &middot; CURRENT STATE &middot; ACTIVE</div>
+    <div class="ch-b">
+      <p>This is the chapter that required the most strategy. Not the code. Not the job applications. Not the breakup. Deciding to go to rehab &mdash; and then actually going &mdash; was the application of SOI in its most personal form.</p>
+      <p>Asking for help is not weakness. Asking for help when everything in your circumstances has trained you to expect that asking gets you nothing &mdash; that takes a specific kind of courage that I did not know I had until I used it.</p>
+      <p>Rehab happened. Four months clean as of the time this was first written. The work did not stop during this. The documentation did not stop. The builds did not stop. Recovery and production ran in parallel because the terminal had become too important a part of the structure to put down.</p>
+      <p>The return is not to who I was before. That person existed in different conditions and the conditions have changed. The return is to stability &mdash; the first kind of thing you have to rebuild before anything else can stand. The stability is holding. The work continues. The chapter is still being written.</p>
+      <p>This is the current state. Active. Documented. Not sanitised.</p>
+    </div>
+    <span class="ch-status live">&#9679; ACTIVE &middot; ONGOING</span>
+  </div>
+</section>
+
+<!-- BUILD -->
+<section class="sec" id="build">
+  <div class="sec-tag">TECHNICAL RECORD</div>
+  <h2 class="sec-title cy">THE BUILDS</h2>
+  <div class="sec-line cy"></div>
+  <p class="synopsis">Everything built from a rootless Honor X5b. Android 14. Termux. No laptop. No team. No budget. The code is real, the tools are working, and they were built in the conditions described in the chapters above.</p>
+
+  <div class="bc pk">
+    <div class="bc-ver">V55 &middot; FLAGSHIP</div>
+    <div class="bc-name">FEZZY STATION</div>
+    <p>The central hub. A Bash-powered dashboard with 10 portals: Gallery, Music, Video, Web Grab, Music Search, Tools, Books (70K+), Social OSINT, Hacker Lab, and the Juice WRLD Archive. Boot speed under 30 seconds. 120K+ organic views. Built entirely by one person, on one phone, across 55 documented versions.</p>
+    <div class="tags"><span class="tag tp">BASH</span><span class="tag tc">PYTHON</span><span class="tag tv">TERMUX</span><span class="tag tg">V1&rarr;V55</span><span class="tag tgr">GITHUB PAGES</span></div>
+  </div>
+
+  <div class="bc cy">
+    <div class="bc-ver">V3 &middot; SECURITY</div>
+    <div class="bc-name">BOJACK SECURITY</div>
+    <p>A 2800+ line Bash security dashboard. Named after the dog who stayed. Six confirmed sections: BIRDS EYE VIEW, SPEAK IN CODES, MIND CONTROL, CROSS THE GLOBE, SECURITY HUB, CONTROL HUB. 30+ tools. Rootless &mdash; no root required. Educational use only. Built in the same apartment where the isolation chapters were written.</p>
+    <div class="tags"><span class="tag tp">BASH</span><span class="tag tc">SECURITY</span><span class="tag tv">ROOTLESS</span><span class="tag tgr">OSINT</span></div>
+  </div>
+
+  <div class="bc pu">
+    <div class="bc-ver">WEB &middot; FLASK</div>
+    <div class="bc-name">STILL HERE &middot; RAVENSMEAD SPEAKS</div>
+    <p>A Flask community awareness site for Ravensmead, Cape Town. Mental health resources. Rehabilitation centre listings. Crisis lines. Built because the community needed it, not because it would get traffic. The most personally important thing in the archive &mdash; and the one that required the most honesty to ship.</p>
+    <div class="tags"><span class="tag tp">FLASK</span><span class="tag tc">PYTHON</span><span class="tag tv">COMMUNITY</span><span class="tag tg">CAPE TOWN</span></div>
+  </div>
+
+  <div class="bc go">
+    <div class="bc-ver">HTML &middot; DOCUMENTATION</div>
+    <div class="bc-name">GRANT &amp; THE MACHINES</div>
+    <p>A standalone HTML site documenting the AI workflow: the relationship between Grant, Claude, ChatGPT, and Gemini. How the three-AI pipeline works. What each AI contributes. A record of how this kind of building actually happens in practice, at this level of resource constraint, from a phone screen.</p>
+    <div class="tags"><span class="tag tp">HTML</span><span class="tag tc">CLAUDE</span><span class="tag tv">CHATGPT</span><span class="tag tg">GEMINI</span></div>
+  </div>
+</section>
+
+<!-- SOI -->
+<section class="sec" id="soi">
+  <div class="sec-tag">THE PHILOSOPHY</div>
+  <h2 class="sec-title pu">STRATEGY OVER IMPULSE</h2>
+  <div class="sec-line pu"></div>
+  <p class="synopsis">SOI was not written in a comfortable room. It was written in the pressure of survival. Every decision filtered through one question: Am I acting on strategy or impulse right now?</p>
+  <div class="quote pu">"SOI is not about suppressing instinct. It is about having enough self-awareness to know which mode you are in &mdash; and making a conscious decision within it rather than being carried by it."<div class="q-attr">&mdash; FEZZY WRLD &middot; SOI DOCUMENTATION</div></div>
+  <div class="principle"><div class="p-n">01</div><div class="p-t"><strong>THINK before you ACT.</strong> Not paralysis &mdash; awareness. Know what you are about to do and why before you do it. One second of awareness is the difference between building and breaking.</div></div>
+  <div class="principle"><div class="p-n">02</div><div class="p-t"><strong>PLAN before you BUILD.</strong> Even a rough plan written in comments before the first line of code changes the outcome. Admin Fezzy plans. Intox Fezzy executes. The plan is what connects the two modes.</div></div>
+  <div class="principle"><div class="p-n">03</div><div class="p-t"><strong>UNDERSTAND before you EXECUTE.</strong> Read the error message. Read the documentation. One minute of understanding saves an hour of trial and error. Impulse skips the understanding. Strategy does not.</div></div>
+  <div class="principle"><div class="p-n">04</div><div class="p-t"><strong>DOCUMENT everything.</strong> If it is not documented, it did not happen. The version history is the proof of work. The README is the contract with the future. Write it down even if no one is reading yet.</div></div>
+  <div class="principle"><div class="p-n">05</div><div class="p-t"><strong>STABILITY first.</strong> Nothing stands without a foundation. Rebuild stability before you rebuild anything else. This applies to code architecture and personal recovery &mdash; the principle is the same in both contexts.</div></div>
+  <div class="principle"><div class="p-n">06</div><div class="p-t"><strong>ASKING FOR HELP is the most strategic move you can make.</strong> Impulse says handle it alone. Strategy knows when the problem requires more than one person and chooses connection over pride.</div></div>
+</section>
+
+<!-- BOJACK -->
+<section class="sec" id="bojack">
+  <div class="sec-tag">THE ANCHOR</div>
+  <h2 class="sec-title go">BOJACK</h2>
+  <div class="sec-line go"></div>
+  <div class="bj">
+    <div class="bj-name">BOJACK</div>
+    <div class="bj-breed">LAB / HUSKY MIX &middot; RAVENSMEAD &middot; MASCOT &middot; ANCHOR</div>
+    <p class="bj-b">When everything else left, Bojack stayed. No version numbers. No error messages. No conditions. Just presence &mdash; consistent, physical, unconditional.<br><br>Bojack Security is named after him because that is what loyalty looks like in practice: watching the perimeter without being asked, showing up without a schedule, protecting without expecting anything in return.<br><br>He was there at 2am when the sessions ran long. He was there in the morning when the damage from the night before needed to be assessed. He did not care about the build. He cared about me being in the room.<br><br>That is the highest form of loyalty I have encountered. I wanted to name something after it.</p>
+  </div>
+</section>
+
+<!-- HEALTH -->
+<section class="sec" id="health">
+  <div class="sec-tag">COMMUNITY &middot; CAPE TOWN</div>
+  <h2 class="sec-title pk">MENTAL HEALTH RESOURCES</h2>
+  <div class="sec-line pk"></div>
+  <div class="hw">&#9888; DISCLAIMER: This page contains references to depression, anxiety, isolation, and substance recovery. If you are in a dark place right now &mdash; the resources below are real. The lines are free. You are not alone. Asking for help is the most strategic move you can make.</div>
+  <div class="quote pk">"If you are reading this because you are in a dark place: the lines are listed below. You are not alone. Ravensmead has more people who understand than you think."<div class="q-attr">&mdash; GRANT FESTERS</div></div>
+  <div style="font-family:var(--mono);font-size:10px;color:var(--cyan);letter-spacing:3px;margin:20px 0 12px;">CRISIS LINES &middot; SOUTH AFRICA</div>
+  <div class="g2">
+    <div class="cc"><div class="cc-name">SADAG 24HR HELPLINE</div><div class="cc-num">0800 456 789</div><div class="cc-note">FREE &middot; 24 hours &middot; South African Depression &amp; Anxiety Group</div></div>
+    <div class="cc"><div class="cc-name">SUICIDE CRISIS LINE</div><div class="cc-num">0800 567 567</div><div class="cc-note">FREE &middot; 24 hours &middot; Talk to someone now</div></div>
+    <div class="cc"><div class="cc-name">SADAG WHATSAPP</div><div class="cc-num">076 882 2775</div><div class="cc-note">Text if you cannot speak</div></div>
+    <div class="cc"><div class="cc-name">LIFELINE WESTERN CAPE</div><div class="cc-num">0861 322 322</div><div class="cc-note">Crisis counselling &middot; Cape Town</div></div>
+  </div>
+  <div style="font-family:var(--mono);font-size:10px;color:var(--purple);letter-spacing:3px;margin:24px 0 12px;">REHABILITATION &middot; CAPE TOWN</div>
+  <div class="cc"><div class="cc-name">METRO DRUG ADVISORY BOARD (MDAC)</div><div class="cc-sub">021 448 4640</div><div class="cc-note">Government &middot; Free for qualifying residents &middot; Voortrekker Road, Bellville</div></div>
+  <div class="cc"><div class="cc-name">CROSSROADS RECOVERY CENTRE</div><div class="cc-sub">086 180 0500 (24hr)</div><div class="cc-note">Detox, therapy, aftercare &middot; crossroads.co.za</div></div>
+  <div class="cc"><div class="cc-name">NEW BEGINNINGS TREATMENT CENTRE</div><div class="cc-sub">086 111 1474</div><div class="cc-note">Addiction + mental health &middot; Dual diagnosis &middot; newbeginnings.co.za</div></div>
+  <div class="cc"><div class="cc-name">STIKLAND PSYCHIATRIC HOSPITAL</div><div class="cc-sub">021 940 1100</div><div class="cc-note">Government &middot; Free &middot; Referral required &middot; Hospital Street, Bellville</div></div>
+  <div class="cc"><div class="cc-name">SADAG &middot; THERAPIST REFERRALS</div><div class="cc-sub">sadag.org</div><div class="cc-note">Free referrals &middot; Support groups &middot; Confidential</div></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="foot-name">FEZZY WRLD</div>
+  <div class="foot-soi">STRATEGY OVER IMPULSE &middot; 999 FOREVER</div>
+  <div class="foot-links">
+    <a class="fl" href="https://github.com/philfesters" target="_blank">&#9711; GITHUB</a>
+    <a class="fl" href="https://philfesters.github.io/Grant-Fezzy-Portal-Atake" target="_blank">&#9711; FEZZY STATION</a>
+    <a class="fl" href="#chapters">&#9654; CHAPTERS</a>
+    <a class="fl" href="#health">&#10084; HEALTH</a>
+  </div>
+  <div class="foot-c">&copy; 2026 <span>GRANT FEZZY FESTERS</span> &middot; RAVENSMEAD &middot; CAPE TOWN &middot; SOUTH AFRICA<br>Built on Honor X5b &middot; Android 14 &middot; Termux &middot; No Laptop &middot; No Team &middot; No Budget<br>All work owned by self. Built in the conditions documented above.</div>
+</footer>
+</div>
+
+<script>
+const BOOT=[
+  {t:80,c:'cyan',m:'> INITIALIZING GRANT FESTERS LIFE ARCHIVE...'},
+  {t:200,c:'out',m:'> LOADING CHAPTER DATABASE...'},
+  {t:140,c:'ok',m:'> [OK] CHAPTERS 00 - 07 LOADED'},
+  {t:160,c:'out',m:'> CONNECTING TO RAVENSMEAD, CAPE TOWN...'},
+  {t:120,c:'ok',m:'> [OK] CAPE TOWN NODE ACTIVE'},
+  {t:180,c:'out',m:'> VALIDATING SOI PROTOCOLS...'},
+  {t:100,c:'ok',m:'> [OK] STRATEGY OVER IMPULSE: CONFIRMED'},
+  {t:140,c:'pink',m:'> SUBJECT: GRANT FESTERS | BORN 1992 | ALIVE'},
+  {t:160,c:'pink',m:'> DEVICE: HONOR X5B | ANDROID 14 | ROOTLESS'},
+  {t:120,c:'out',m:'> LOADING BOJACK SECURITY SUITE...'},
+  {t:100,c:'ok',m:'> [OK] BOJACK ONLINE | PERIMETER CLEAR'},
+  {t:160,c:'pink',m:'> THIS IS NOT A PORTFOLIO. THIS IS A RECORD.'},
+  {t:100,c:'cyan',m:'> WELCOME. READ EVERYTHING.'},
+];
+let bi=0,booted=false;
+const bl=document.getElementById('boot-log');
+const bb=document.getElementById('bbar');
+function bootNext(){
+  if(booted)return;
+  if(bi>=BOOT.length){setTimeout(bootDone,400);return;}
+  const ln=BOOT[bi++];
+  const s=document.createElement('span');
+  s.style.display='block';
+  const cols={cyan:'#00f5ff',ok:'#39ff14',pink:'#ff3ea5',out:'#ddddf5'};
+  s.style.color=cols[ln.c]||'#ddddf5';
+  s.textContent=ln.m;
+  bl.appendChild(s);
+  bl.scrollTop=bl.scrollHeight;
+  bb.style.width=Math.round((bi/BOOT.length)*100)+'%';
+  setTimeout(bootNext,ln.t);
+}
+function bootDone(){
+  if(booted)return;booted=true;
+  bb.style.width='100%';
+  setTimeout(()=>{
+    document.getElementById('boot').classList.add('fade-out');
+    document.getElementById('site').classList.add('on');
+    setTimeout(()=>document.getElementById('boot').style.display='none',800);
+  },300);
+}
+function bootSkip(){if(booted)return;booted=true;document.getElementById('boot').classList.add('fade-out');document.getElementById('site').classList.add('on');setTimeout(()=>document.getElementById('boot').style.display='none',800);}
+setTimeout(bootNext,400);
+
+function tick(){const n=new Date();const t=n.toLocaleTimeString('en-ZA',{hour12:false,hour:'2-digit',minute:'2-digit'});const e=document.getElementById('clock');if(e)e.textContent='SAST '+t;}
+tick();setInterval(tick,1000);
+
+function initCounter(){
+  const start=new Date('2015-03-23');
+  const days=Math.floor((new Date()-start)/86400000);
+  const el=document.getElementById('dc');if(!el)return;
+  let cur=0;const step=Math.ceil(days/60);
+  const iv=setInterval(()=>{cur=Math.min(cur+step,days);el.textContent=cur.toLocaleString();if(cur>=days)clearInterval(iv);},18);
+}
+initCounter();
+
+const secIds=['story','chapters','build','soi','bojack','health'];
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secIds.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-80)cur=id;});
+  document.querySelectorAll('.nav-link').forEach(l=>{
+    const active=l.getAttribute('href')==='#'+cur;
+    l.style.color=active?'var(--cyan)':'';
+    l.style.borderColor=active?'rgba(0,245,255,0.3)':'transparent';
+  });
+},{passive:true});
+</script>
+</body>
+</html>
